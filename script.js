@@ -9,15 +9,15 @@ function computerPlay() {
     
     //If the random number is 1 - 3, the guess is Rock
     if (randomNumber < 4) {
-        return computerSelection = "Rock";
+        return computerSelection = "rock";
     }
     //If the random number is 4 - 6, the guess is Paper
     else if (randomNumber >= 4 || randomNumber <= 6) {
-    return computerSelection = "Paper";
+    return computerSelection = "paper";
     }
     //If the random number is 7 - 9. the guess is Scissors
     else if (randomNumber > 6 || randomNumber <= 9) {
-    return computerSelection = "Scissors";
+    return computerSelection = "scissors";
     }
     }
 
