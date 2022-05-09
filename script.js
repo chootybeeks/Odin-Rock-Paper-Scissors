@@ -20,3 +20,8 @@ function computerPlay() {
     return computerSelection = "Scissors";
     }
     }
+
+function userPlay() {
+    let playerSelection = prompt("Rock, Paper, or Scissors?: ").toLowerCase();
+    return playerSelection;
+}
