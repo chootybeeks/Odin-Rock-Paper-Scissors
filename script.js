@@ -1,22 +1,22 @@
 function computerPlay() {
     //This variable contains the maximum value that the randomNumber will generate.
-    const max = 9;
+    const max = 3;
     
     let computerSelection;
     let randomNumber;
-    //Generate a random number between 1 and max (9)
+    //Generate a random number between 1 and max (3)
     randomNumber = Math.floor(Math.random() * max) + 1;
     
-    //If the random number is 1 - 3, the guess is Rock
-    if (randomNumber < 4) {
+    //If the random number is 1 computerSelection is Rock
+    if (randomNumber == 1) {
         return computerSelection = "rock";
     }
-    //If the random number is 4 - 6, the guess is Paper
-    else if (randomNumber >= 4 || randomNumber <= 6) {
+    //If the random number is 2 computerSelection is Paper
+    else if (randomNumber == 2) {
     return computerSelection = "paper";
     }
-    //If the random number is 7 - 9. the guess is Scissors
-    else if (randomNumber > 6 || randomNumber <= 9) {
+    //If the random number 3 computerSelection is Scissors
+    else if (randomNumber == 3) {
     return computerSelection = "scissors";
     }
     }
