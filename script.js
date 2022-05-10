@@ -54,37 +54,7 @@ if (playerSelection == "rock" && computerSelection == "scissors") {
 }   
     
 function game() {
-let gameCounter = 0;
-let computerScore = 0;
-let playerScore = 0;
-let gameWinner;
 
-//Call the playRound function 5 times and use the result variable to keep the score
-while (gameCounter < 5) {
-
-playRound(userPlay(), computerPlay());
-
-if (result.charAt(4) == 'L') {
-computerScore++;
-}
-else if (result.charAt(4) == 'W') {
-playerScore++;
-}
-console.log(computerScore)
-gameCounter++;
-}
-
-//These if statements determine the winner(if there is one) and display the result along with the score
-if (computerScore > playerScore) {
-gameWinner = ("The computer wins! You lost " + computerScore + " to " + playerScore + ".");
-}
-else if (computerScore < playerScore) {
-gameWinner = ("You win! You beat the computer " + playerScore + " to " + computerScore + ".");
-}
-else {
-gameWinner = ("Draw. The score is tied at " + playerScore + ".");
-}
-console.log(gameWinner);
 }
 
 game();
