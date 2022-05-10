@@ -66,7 +66,8 @@ let gameWinner;
 
 //Call the playRound function 5 times and use the result variable to keep the score
 while (gameCounter < 5) {
-playRound();
+
+playRound(userPlay(), computerPlay());
 
 if (result.charAt(4) == 'L') {
 computerScore++;
@@ -74,6 +75,7 @@ computerScore++;
 else if (result.charAt(4) == 'W') {
 playerScore++;
 }
+console.log(computerScore)
 gameCounter++;
 }
 
@@ -87,4 +89,7 @@ gameWinner = ("You win! You beat the computer " + playerScore + " to " + compute
 else {
 gameWinner = ("Draw. The score is tied at " + playerScore + ".");
 }
+console.log(gameWinner);
 }
+
+game();
