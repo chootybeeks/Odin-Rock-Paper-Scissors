@@ -54,6 +54,16 @@ if (playerSelection == "rock" && computerSelection == "scissors") {
 }   
     
 function game() {
+//For loop will all the game to be played a pre-determined number of times, in this case 5 times.
+let numberOfGames = 5;
+
+for (let i = 0; i < numberOfGames; i++) {
+    
+    let playerSelection = prompt("Rock, Paper, or Scissors?: ");
+    playerSelection = playerSelection.toLowerCase();
+    let computerSelection = computerPlay();
+    console.log(playRound(playerSelection, computerSelection));
+}
 
 }
 
