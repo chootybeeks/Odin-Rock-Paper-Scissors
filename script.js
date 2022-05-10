@@ -21,7 +21,8 @@ return computerSelection = "scissors";
 }
 }
 
-let computerScore, playerScore;
+let computerScore = 0;
+let playerScore = 0;
 function playRound(playerSelection, computerSelection) {
 //Rock beats scissors, scissors beats paper, and paper beats rock. If both are the same, then there is a draw.
 if (playerSelection == "rock" && computerSelection == "scissors") {
