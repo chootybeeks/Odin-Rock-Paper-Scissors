@@ -65,7 +65,14 @@ for (let i = 0; i < numberOfGames; i++) {
     let computerSelection = computerPlay();
     console.log(playRound(playerSelection, computerSelection));
 }
-
+//If statement to determine the winner, if there is one
+if (playerScore > computerScore) {
+    console.log(`You beat the computer! Final score: ${playerScore} to ${computerScore}`);
+}
+else if (playerScore < computerScore) {
+    console.log(`The computer beat you! Final score: ${computerScore} to ${playerScore}`);
+}
+else console.log(`Draw. Final score: ${playerScore} to ${computerScore}`);
 }
 
 game();
