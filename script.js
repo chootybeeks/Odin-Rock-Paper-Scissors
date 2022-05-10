@@ -24,34 +24,7 @@ return computerSelection = "scissors";
 let computerScore, playerScore;
 function playRound(playerSelection, computerSelection) {
 //Rock beats scissors, scissors beats paper, and paper beats rock. If both are the same, then there is a draw.
-let result;
-if (playerSelection === computerSelection) {
-return result = ("Draw. Nobody wins.");
-}
 
-if (playerSelection == "rock" && computerSelection == "paper") {
-return result = ("You Lose! Paper beats Rock");
-}
-
-if (playerSelection == "paper" && computerSelection == "scissors") {
-return result = ("You Lose! Scissors beats Paper");
-}
-
-if (playerSelection == "scissors" && computerSelection == "rock") {
-return result = ("You Lose! Rock beats Scissors");
-}
-
-if (playerSelection == "scissors" && computerSelection == "paper") {
-return result = ("You Win! Scissors beats Paper");
-}
-
-if (playerSelection == "paper" && computerSelection == "rock") {
-return result = ("You Win! Paper beats Rock");
-}
-
-if (playerSelection == "rock" && computerSelection == "scissors") {
-return result = ("You Win! Rock beats Scissors");
-}
 }   
     
 function game() {
