@@ -16,8 +16,8 @@ function newPlayRound(event) {
     let roundNumber = 0;
 
     //Declare and initialize player and computer selections
-    let playerSelection = event.target.value.toLowerCase();
-    //let computerSelection = computerPlay();
+    let playerSelection = event.target.getAttribute('id');
+    let computerSelection = computerPlay();
     console.log(playerSelection);
 }
 
