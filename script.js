@@ -10,9 +10,15 @@ scissors.addEventListener('click', (event) => console.log(event));
 
 //Rewrite playRound function to accept (event) as an argument
 function newPlayRound(event) {
+    //Declare variables to keep track of
     let playerScore = 0;
     let computerScore = 0;
     let winner = 0;
+
+    //Declare and initialize player and computer selections
+    let playerSelection = event.target.value.toLowerCase();
+    let computerSelection = computerPlay();
+    console.log(computerSelection, playerSelection);
 }
 
 function computerPlay() {
