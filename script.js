@@ -20,7 +20,7 @@ function newPlayRound(event) {
     let playerSelection = event.target.getAttribute('id');
     let computerSelection = computerPlay();
     results = playRound(playerSelection, computerSelection);
-    console.log(results);
+    
     
 }
 
@@ -53,31 +53,23 @@ function playRound(playerSelection, computerSelection) {
 //Rock beats scissors, scissors beats paper, and paper beats rock. If both are the same, then there is a draw.
 if (playerSelection == "rock" && computerSelection == "scissors") {
     playerScore++;
-    return (`You win! Rock beats Scissors. Score: ${playerScore} to ${computerScore}`);
 }
     else if (playerSelection == "rock" && computerSelection == "paper") {
         computerScore++;
-        return (`You lose! Paper covers Rock. Score: ${playerScore} to ${computerScore}`);
     }
     else if (playerSelection == "paper" && computerSelection == "scissors") {
         computerScore++;
-        return (`You lose! Scissors cuts Paper. Score: ${playerScore} to ${computerScore}`);
     }
     else if (playerSelection == "paper" && computerSelection == "rock") {
         playerScore++;
-        return (`You win! Paper covers Rock. Score: ${playerScore} to ${computerScore}`);
     }
     else if (playerSelection == "scissors" && computerSelection == "paper") {
         playerScore++;
-        return (`You win! Scissors cuts Paper. Score: ${playerScore} to ${computerScore}`);
     }
     else if (playerSelection == "scissors" && computerSelection == "rock") {
         computerScore++;
-        return (`You lose! Rock beats Scissors. Score: ${playerScore} to ${computerScore}`);
     }
-    else {
-        return (`Draw. Nobody wins. Score: ${playerScore} to ${computerScore}`);
-    }
+    
 }   
     
 //function game() {
