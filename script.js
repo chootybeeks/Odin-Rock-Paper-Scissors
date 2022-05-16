@@ -9,17 +9,19 @@ paper.addEventListener('click', newPlayRound);
 scissors.addEventListener('click', newPlayRound);
 
 //Rewrite playRound function to accept (event) as an argument
-function newPlayRound(event) {
+function newPlayRound(event, scoreArray) {
     //Declare variables to keep track of
     let playerScore;
     let computerScore;
-    let roundNumber = 0;
+    //let roundNumber = 0;
     let results;
 
     //Declare and initialize player and computer selections
     let playerSelection = event.target.getAttribute('id');
     let computerSelection = computerPlay();
     results = playRound(playerSelection, computerSelection);
+    console.log(results);
+    
     
     
 }
@@ -50,26 +52,31 @@ return computerSelection = "scissors";
 function playRound(playerSelection, computerSelection) {
     let playerScore = 0;
     let computerScore = 0;
+    let roundNumber = 1;
+   
 //Rock beats scissors, scissors beats paper, and paper beats rock. If both are the same, then there is a draw.
-if (playerSelection == "rock" && computerSelection == "scissors") {
-    playerScore++;
-}
-    else if (playerSelection == "rock" && computerSelection == "paper") {
-        computerScore++;
-    }
-    else if (playerSelection == "paper" && computerSelection == "scissors") {
-        computerScore++;
-    }
-    else if (playerSelection == "paper" && computerSelection == "rock") {
+while (roundNumber <= 5) {
+    if (playerSelection == "rock" && computerSelection == "scissors") {
         playerScore++;
     }
-    else if (playerSelection == "scissors" && computerSelection == "paper") {
-        playerScore++;
+        else if (playerSelection == "rock" && computerSelection == "paper") {
+            computerScore++;
+        }
+        else if (playerSelection == "paper" && computerSelection == "scissors") {
+            computerScore++;
+        }
+        else if (playerSelection == "paper" && computerSelection == "rock") {
+            playerScore++;
+        }
+        else if (playerSelection == "scissors" && computerSelection == "paper") {
+            playerScore++;
+        }
+        else if (playerSelection == "scissors" && computerSelection == "rock") {
+            computerScore++;
+        }
+    roundNumber++;    
     }
-    else if (playerSelection == "scissors" && computerSelection == "rock") {
-        computerScore++;
-    }
-    
+    return [playerScore, computerScore];
 }   
     
 //function game() {
