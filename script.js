@@ -1,10 +1,19 @@
+//Add querySelector for each button
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 
+//Add eventListener and console log for each button click
 rock.addEventListener('click', (event) => console.log(event));
 paper.addEventListener('click', (event) => console.log(event));
 scissors.addEventListener('click', (event) => console.log(event));
+
+//Rewrite playRound function to accept (event) as an argument
+function newPlayRound(event) {
+    let playerScore = 0;
+    let computerScore = 0;
+    let winner = 0;
+}
 
 function computerPlay() {
 //This variable contains the maximum value that the randomNumber will generate.
