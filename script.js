@@ -4,21 +4,21 @@ const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 
 //Add eventListener and console log for each button click
-rock.addEventListener('click', (event) => console.log(event));
-paper.addEventListener('click', (event) => console.log(event));
-scissors.addEventListener('click', (event) => console.log(event));
+rock.addEventListener('click', newPlayRound);
+paper.addEventListener('click', newPlayRound);
+scissors.addEventListener('click', newPlayRound);
 
 //Rewrite playRound function to accept (event) as an argument
 function newPlayRound(event) {
     //Declare variables to keep track of
     let playerScore = 0;
     let computerScore = 0;
-    let winner = 0;
+    let roundNumber = 0;
 
     //Declare and initialize player and computer selections
     let playerSelection = event.target.value.toLowerCase();
-    let computerSelection = computerPlay();
-    console.log(computerSelection, playerSelection);
+    //let computerSelection = computerPlay();
+    console.log(playerSelection);
 }
 
 function computerPlay() {
@@ -44,9 +44,9 @@ return computerSelection = "scissors";
 }
 }
 
-let computerScore = 0;
-let playerScore = 0;
-function playRound(playerSelection, computerSelection) {
+//let computerScore = 0;
+//let playerScore = 0;
+/*function playRound(playerSelection, computerSelection) {
 //Rock beats scissors, scissors beats paper, and paper beats rock. If both are the same, then there is a draw.
 if (playerSelection == "rock" && computerSelection == "scissors") {
     playerScore++;
@@ -76,10 +76,10 @@ if (playerSelection == "rock" && computerSelection == "scissors") {
         return (`Draw. Nobody wins. Score: ${playerScore} to ${computerScore}`);
     }
 }   
-    
-function game() {
+  */  
+//function game() {
 //For loop will all the game to be played a pre-determined number of times, in this case 5 times.
-let numberOfGames = 5;
+//let numberOfGames = 5;
 
 /*for (let i = 0; i < numberOfGames; i++) {
     
@@ -89,14 +89,14 @@ let numberOfGames = 5;
     console.log(playRound(playerSelection, computerSelection));
 }*/
 //If statement to determine the winner, if there is one
-if (playerScore > computerScore) {
+/*if (playerScore > computerScore) {
     console.log(`You beat the computer! Final score: ${playerScore} to ${computerScore}`);
 }
 else if (playerScore < computerScore) {
     console.log(`The computer beat you! Final score: ${computerScore} to ${playerScore}`);
 }
 else console.log(`Draw. Final score: ${playerScore} to ${computerScore}`);
-}
+}*/
 
 //game();
 
