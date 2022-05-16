@@ -11,14 +11,17 @@ scissors.addEventListener('click', newPlayRound);
 //Rewrite playRound function to accept (event) as an argument
 function newPlayRound(event) {
     //Declare variables to keep track of
-    let playerScore = 0;
-    let computerScore = 0;
+    let playerScore;
+    let computerScore;
     let roundNumber = 0;
+    let results;
 
     //Declare and initialize player and computer selections
     let playerSelection = event.target.getAttribute('id');
     let computerSelection = computerPlay();
-    console.log(playerSelection);
+    results = playRound(playerSelection, computerSelection);
+    console.log(results);
+    
 }
 
 function computerPlay() {
@@ -44,9 +47,9 @@ return computerSelection = "scissors";
 }
 }
 
-//let computerScore = 0;
-//let playerScore = 0;
-/*function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
+    let playerScore = 0;
+    let computerScore = 0;
 //Rock beats scissors, scissors beats paper, and paper beats rock. If both are the same, then there is a draw.
 if (playerSelection == "rock" && computerSelection == "scissors") {
     playerScore++;
@@ -76,7 +79,7 @@ if (playerSelection == "rock" && computerSelection == "scissors") {
         return (`Draw. Nobody wins. Score: ${playerScore} to ${computerScore}`);
     }
 }   
-  */  
+    
 //function game() {
 //For loop will all the game to be played a pre-determined number of times, in this case 5 times.
 //let numberOfGames = 5;
