@@ -63,8 +63,8 @@ let numberOfGames = 5;
     let playerSelection = prompt("Rock, Paper, or Scissors?: ");
     playerSelection = playerSelection.toLowerCase();
     let computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));*/
-}
+    console.log(playRound(playerSelection, computerSelection));
+}*/
 //If statement to determine the winner, if there is one
 if (playerScore > computerScore) {
     console.log(`You beat the computer! Final score: ${playerScore} to ${computerScore}`);
@@ -75,4 +75,12 @@ else if (playerScore < computerScore) {
 else console.log(`Draw. Final score: ${playerScore} to ${computerScore}`);
 }
 
-game();
+//game();
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log(button.id);
+    });
+});
+//});
