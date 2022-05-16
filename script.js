@@ -1,3 +1,11 @@
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+rock.addEventListener('click', (event) => console.log(event));
+paper.addEventListener('click', (event) => console.log(event));
+scissors.addEventListener('click', (event) => console.log(event));
+
 function computerPlay() {
 //This variable contains the maximum value that the randomNumber will generate.
 const max = 3;
@@ -77,10 +85,5 @@ else console.log(`Draw. Final score: ${playerScore} to ${computerScore}`);
 
 //game();
 
-const buttons = document.querySelectorAll('button');
-buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-        console.log(button.id);
-    });
-});
+
 //});
