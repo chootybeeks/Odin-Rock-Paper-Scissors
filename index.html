@@ -8,10 +8,36 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="container">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+    <section class ="game">
+        
+        <div class="banner">Rock Paper Scissors</div>
+            <div class="score">
+                <div class="player-score">
+                    <h2>Player</h2>
+                    <p class="player-points">0</p>
+                </div>
+                <div class="computer-score">
+                    <h2>CPU</h2>
+                    <p class="computer-points">0</p>
+                </div>
+            </div>
+
+            <div class="play">Select your play</div>
+
+            <div class="round-counter">Round: 1</div>
+
+            <div id="player-choices">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissors">Scissors</button>
+            </div>
+
+            <div class="winner">The winner is: </div>
+
+            <button class="retry">Play Again?</button>
+
+    </section>
+    
         
     
 </body>
