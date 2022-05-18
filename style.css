@@ -32,13 +32,57 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 40vw;
+    width: 75vw;
     font-size: 2.5rem;
     align-items: flex-start;
     position: absolute;
-    top: 10rem;
+    top: 15rem;
 }
 
 .player-points, .computer-points {
     text-align: center;
+    font-size: 5rem;
+}
+
+.round-counter {
+    position: absolute;
+    top: 10rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.winner {
+    position: absolute;
+    top: 20rem;
+    font-size: 1.5rem;
+}
+
+.retry {
+    position: absolute;
+    top: 45rem;
+}
+
+.play {
+    position: absolute;
+    top: 30rem;
+    font-size: 1.75rem;
+}
+
+#player-choices {
+    position: absolute;
+    top: 35rem;
+}
+
+button {
+    padding: 2rem 1rem;
+    font-size: 2rem;
+    margin: 0 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 2px 2px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #F2091D;
+    transition: .4, ease-in-out;
 }
