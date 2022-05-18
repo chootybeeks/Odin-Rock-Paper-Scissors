@@ -28,5 +28,49 @@ playerChoices.forEach(choice => {
 })
 }
 
+function winner(player, computer) {
+    const result = document.querySelector('.winner')
+    const playerPoints = document.querySelector('player-points')
+    const computerPoints = document.querySelector('compuer-points')
 
+    if (player === computer) {
+        result.textContent = 'Tie'
+    }
+    else if (player == 'rock') {
+        if (computer == 'scissors') {
+            result.textContent = 'You win, rock beats scissors'
+            playerPoints++
+            playerPoints.textContent = playerPoints
+        }
+        else {
+            result.textContent = 'You lose, paper covers rock'
+            computerPoints++
+            computerPoints.textContent = computerPoints
+        }
+    }
+    else if (player == 'paper') {
+        if (computer == 'rock') {
+            result.textContent = 'You win, paper covers rock'
+            playerPoints++
+            playerPoints.textContent = playerPoints
+        }
+        else {
+            result.textContent = 'You lose, scissors cuts paper'
+            computerPoints++
+            computerPoints.textContent = computerPoints
+        }
+    }
+    else if (player == 'scissors') {
+        if (computer == 'paper') {
+            result.textContent = 'You win, scissors cuts paper'
+            playerPoints++
+            playerPoints.textContent = playerPoints
+        }
+        else {
+            result.textContent = 'You lose, rock beats scissors'
+            computerPoints++
+            computerPoints.textContent = computerPoints
+        }
+    }
+}
 
