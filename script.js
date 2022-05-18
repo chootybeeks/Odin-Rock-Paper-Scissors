@@ -26,6 +26,9 @@ playerChoices.forEach(choice => {
         const computerPlay = computerChoices[randomNumber]
     })
 })
+
+//Call winner function to check who wins
+winner(this.innerText, computerPlay)
 }
 
 function winner(player, computer) {
@@ -74,3 +77,25 @@ function winner(player, computer) {
     }
 }
 
+function gameEnd(playerOptions, roundNumber) {
+    const choosePlay = document.querySelector('.play')
+    const winner = document.querySelector('.winner')
+    const retryButton = document.querySelector('.retry')
+
+    choosePlay.innerText = 'Game finished!'
+    roundNumber.style.display = 'none'
+
+    if (playerPoints > computerPoints) {
+        winner.innerText = 'You Won!'
+    }
+    else if (playerPoints < computerPoints) {
+        winner.innerText = 'You Lost!'
+    }
+    else {
+        winner.innerText = 'Draw.'
+    }
+
+    retryButton.innerText = 'Try Again?'
+    retryButton.addEventListener('click', () => {
+        window.location.reload()
+    })
