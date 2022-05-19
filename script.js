@@ -2,6 +2,8 @@
 let userSelection
 let computerSelection
 let winner
+let userScore
+let computerScore
 
 //Create h1 elements to display the userChoice and computerChoice
 const userChoiceDisplayElement = document.createElement('h1');
@@ -16,7 +18,7 @@ const userScoreDisplayElement = document.createElement('h1')
 
 //Create parent element to append the previous elements to
 const gamePlay = document.getElementById('game')
-gamePlay.append(userChoiceDisplayElement, computerChoiceDisplayElement, resultDisplayElement, currentRoundDisplayElement, userScoreDisplayElement)
+gamePlay.append(userChoiceDisplayElement, computerChoiceDisplayElement, resultDisplayElement, computerScoreDisplayElement, userScoreDisplayElement)
 
 //The array of choices that the computer and user will choose from
 const choicesArray = ['rock','paper','scissors']
