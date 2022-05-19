@@ -24,6 +24,8 @@ const clickEvents = (event) => {
 
     computerSelection = choicesArray[Math.floor(Math.random() * 3)]
     computerChoiceDisplayElement.textContent = `The computer chose: ${computerSelection}!`
+
+    checkWinner()
 }
 
 //For each loop to create the three clickable buttons
@@ -34,3 +36,23 @@ choicesArray.forEach(choice => {
     choiceButton.addEventListener('click', clickEvents)
     gamePlay.appendChild(choiceButton)
 })
+
+const checkWinner = () => {
+    switch (userSelection + computerSelection) {
+        case 'rockpaper':
+        case 'scissorsrock':
+        case 'paperscissors':
+            resultDisplayElement.textContent = 'You Lose!'
+            break
+        case 'paperrock':
+        case 'rockscissors':
+        case 'scissorspaper':
+            resultDisplayElement.textContent = 'You Win!'
+            break
+        case 'paperpaper':
+        case 'rockrock':
+        case 'scissorsscissors':
+            resultDisplayElement.textContent = 'Draw!'
+            break
+    }
+}
