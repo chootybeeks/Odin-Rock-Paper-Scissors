@@ -2,8 +2,8 @@
 let userSelection
 let computerSelection
 let winner
-let userScore
-let computerScore
+let userScore = 0
+let computerScore = 0
 
 //Create h1 elements to display the userChoice and computerChoice
 const userChoiceDisplayElement = document.createElement('h1');
@@ -32,6 +32,7 @@ const clickEvents = (event) => {
     computerChoiceDisplayElement.textContent = `The computer chose: ${computerSelection}!`
 
     checkWinner()
+    
 }
 
 //For each loop to create the three clickable buttons
@@ -49,10 +50,12 @@ const checkWinner = () => {
         case 'scissorsrock':
         case 'paperscissors':
             resultDisplayElement.textContent = 'You Lose!'
+            computerScore++
             break
         case 'paperrock':
         case 'rockscissors':
         case 'scissorspaper':
+            userScore++
             resultDisplayElement.textContent = 'You Win!'
             break
         case 'paperpaper':
