@@ -32,7 +32,7 @@ const clickEvents = (event) => {
     computerChoiceDisplayElement.textContent = `The computer chose: ${computerSelection}!`
 
     checkWinner()
-    
+    game()
 }
 
 //For each loop to create the three clickable buttons
@@ -64,4 +64,11 @@ const checkWinner = () => {
             resultDisplayElement.textContent = 'Draw!'
             break
     }
+}
+
+const game = () => {
+    computerScoreDisplayElement.textContent = `CPU: ${computerScore}`
+    userScoreDisplayElement.textContent = `You: ${userScore}`
+
+    
 }
