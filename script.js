@@ -5,5 +5,10 @@ const computerChoiceDisplayElement = document.createElement('h1')
 //Create element to display the result of the round
 const resultDisplayElement = document.createElement('h1')
 
+//Create parent element to append the previous elements to
+const gamePlay = document.getElementById('game')
+gamePlay.append(userChoiceDisplayElement, computerChoiceDisplayElement, resultDisplayElement)
+
+
 //The array of choices that the computer and user will choose from
 const choicesArray = ['rock','paper','scissors']
