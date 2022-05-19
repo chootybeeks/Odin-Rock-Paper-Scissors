@@ -12,10 +12,16 @@ gamePlay.append(userChoiceDisplayElement, computerChoiceDisplayElement, resultDi
 //The array of choices that the computer and user will choose from
 const choicesArray = ['rock','paper','scissors']
 
+//Function that contains all that will happen when the user clicks a button
+const clickEvents = (event) => {
+    console.log('clicked')
+}
+
 //For each loop to create the three clickable buttons
 choicesArray.forEach(choice => {
     const choiceButton = document.createElement('button')
-    choiceButton.id = choicesArray[choice]
-    choiceButton.textContent = choicesArray[choice]
+    choiceButton.id = choice
+    choiceButton.textContent = choice
     choiceButton.addEventListener('click', clickEvents)
+    gamePlay.appendChild(choiceButton)
 })
