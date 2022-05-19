@@ -1,3 +1,8 @@
+//global variable declarations
+let userSelection
+let computerSelection
+let winner
+
 //Create h1 elements to display the userChoice and computerChoice
 const userChoiceDisplayElement = document.createElement('h1');
 const computerChoiceDisplayElement = document.createElement('h1')
@@ -14,7 +19,11 @@ const choicesArray = ['rock','paper','scissors']
 
 //Function that contains all that will happen when the user clicks a button
 const clickEvents = (event) => {
-    console.log('clicked')
+    userSelection = event.target.id 
+    userChoiceDisplayElement.textContent = `You chose: ${userSelection}!`
+
+    computerSelection = choicesArray[Math.floor(Math.random() * 3)]
+    computerChoiceDisplayElement.textContent = `The computer chose: ${computerSelection}!`
 }
 
 //For each loop to create the three clickable buttons
