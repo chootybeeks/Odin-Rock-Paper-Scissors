@@ -49,19 +49,19 @@ const checkWinner = () => {
         case 'rockpaper':
         case 'scissorsrock':
         case 'paperscissors':
-            resultDisplayElement.textContent = 'You Lose!'
+            resultDisplayElement.textContent = 'You Lose the Round!'
             computerScore++
             break
         case 'paperrock':
         case 'rockscissors':
         case 'scissorspaper':
             userScore++
-            resultDisplayElement.textContent = 'You Win!'
+            resultDisplayElement.textContent = 'You Win the Round!'
             break
         case 'paperpaper':
         case 'rockrock':
         case 'scissorsscissors':
-            resultDisplayElement.textContent = 'Draw!'
+            resultDisplayElement.textContent = 'This Round is a Draw!'
             break
     }
 }
@@ -70,5 +70,15 @@ const game = () => {
     computerScoreDisplayElement.textContent = `CPU: ${computerScore}`
     userScoreDisplayElement.textContent = `You: ${userScore}`
 
-    
+    if (userScore === 5 || computerScore === 5) {
+            if (computerScore > userScore) {
+            resultDisplayElement.textContent = 'You lost the game!'
+        }
+        else if (userScore > computerScore) {
+            resultDisplayElement.textContent = 'You won the game!'
+        }
+        else {
+            resultDisplayElement.textContent = 'The game is a draw!'
+        }
+    }
 }
